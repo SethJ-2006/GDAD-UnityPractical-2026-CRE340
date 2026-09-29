@@ -20,7 +20,7 @@ public class PlayerStats : MonoBehaviour
 
     public void RecoverMana(int amount)
     {
-        data.currentMana = data.currentMana + amount)
+        data.currentMana = data.currentMana + amount;
 
         data.currentMana = Mathf.Clamp(data.currentMana, 0, data.maximumMana);
 

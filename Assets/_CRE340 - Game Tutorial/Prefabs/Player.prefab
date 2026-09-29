@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 2310393277448599723}
   - component: {fileID: 382550929123582503}
   - component: {fileID: 3425763952202195987}
+  - component: {fileID: 1393528125201421626}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -278,6 +279,23 @@ MonoBehaviour:
   movementInput: {x: 0, y: 0}
   lookInput: {x: 0, y: 0}
   dashInput: 0
+--- !u!114 &1393528125201421626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3857085256146687706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f59661204271e44a606fdef1ce98e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  data:
+    currentHealth: 50
+    maximumHealth: 100
+    currentMana: 20
+    maximumMana: 100
 --- !u!1001 &1614132950580320855
 PrefabInstance:
   m_ObjectHideFlags: 0
