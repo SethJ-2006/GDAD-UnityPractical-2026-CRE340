@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Item : MonoBehaviour
 {
@@ -42,4 +43,29 @@ public class Item : MonoBehaviour
     {
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
+
+
+    private bool canClick = true;
+
+    protected virtual void OnMouseDown()
+    {
+        if (canClick)
+        {
+            canClick = false;
+            StartCoroutine(PulseEffect());
+        }    
+    }
+
+    private IEnumerator PulseEffect()
+    {
+        Vector3 originalScale = transform.localScale;
+        transform.localScale = originalScale * 1.2f;
+
+        yield return new WaitForSeconds(0.2f);
+
+        transform.localScale = originalScale;
+        canClick = true;
+    }
+
+
 }
