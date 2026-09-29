@@ -34,4 +34,12 @@ public class Item : MonoBehaviour
     {
         Debug.Log("Used a generic item - it did nothing");
     }
+
+    [Header("ItemMovement")]
+    [SerializeField] protected float rotationSpeed = 100f;
+
+    protected virtual void Update()
+    {
+        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+    }
 }
