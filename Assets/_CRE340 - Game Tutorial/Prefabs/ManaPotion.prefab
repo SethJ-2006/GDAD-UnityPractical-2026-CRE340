@@ -128,6 +128,8 @@ MonoBehaviour:
   data:
     itemName: Generic Item
     description: A generic item that does things.
+  itemColor: {r: 0.47358483, g: 0.5755107, b: 1, a: 1}
+  rotationSpeed: 100
   manaRecoverAmount: 0
   minRecoverAmount: 10
   maxRecoverAmount: 50

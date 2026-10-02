@@ -1,14 +1,22 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class Item : MonoBehaviour
 {
     [SerializeField] protected ItemData data;
 
+    [Header("Item Appearance")]
+    [SerializeField] protected Color itemColor = Color.antiqueWhite;
 
     protected virtual void Awake()
     {
-        // Come back to this in Part 2
+        Renderer itemRenderer = GetComponent<Renderer>();
+
+        if (itemRenderer != null)
+        {
+            itemRenderer.material.color = itemColor;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -66,6 +74,4 @@ public class Item : MonoBehaviour
         transform.localScale = originalScale;
         canClick = true;
     }
-
-
 }
