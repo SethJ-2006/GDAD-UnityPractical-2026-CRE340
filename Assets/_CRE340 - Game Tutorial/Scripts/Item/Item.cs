@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
 
-public class Item : MonoBehaviour
+public abstract class Item : MonoBehaviour
 {
     [SerializeField] protected ItemData data;
 
@@ -39,10 +39,7 @@ public class Item : MonoBehaviour
         Debug.Log(data.itemName + " : " + data.description);
     }
 
-    public virtual void Use(PlayerStats player)
-    {
-        Debug.Log("Used a generic item - it did nothing");
-    }
+    public abstract void Use(PlayerStats player);
 
     [Header("ItemMovement")]
     [SerializeField] protected float rotationSpeed = 100f;
