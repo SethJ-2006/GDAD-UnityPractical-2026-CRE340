@@ -14,6 +14,13 @@ public class Bullet : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
         rb.useGravity = true;
 
-        // TODO: PART 2!
+        if (collision.gameObject.TryGetComponent<IDamagable>(out IDamagable damageable))
+        {
+            // Add deciding what we hit in the future
+            damageable.TakeDamage(damage);
+            damageable.ShowHitEffect();
+
+            Debug.Log("Hit something - " + damageable.Health + " health remaining!");
+        }
     }
 }
