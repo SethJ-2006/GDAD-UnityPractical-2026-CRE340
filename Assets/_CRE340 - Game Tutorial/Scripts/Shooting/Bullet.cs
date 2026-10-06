@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
             damageable.TakeDamage(damage);
             damageable.ShowHitEffect();
 
-            Debug.Log("Hit something - " + damageable.Health + " health remaining!");
+            // Debug.Log("Hit something - " + damageable.Health + " health remaining!");
         }
     }
 }
