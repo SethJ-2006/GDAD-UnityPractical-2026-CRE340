@@ -23,10 +23,17 @@ public class Crate : MonoBehaviour, IDamagable
     {
         health -= damage;
 
-        // ADD EVENT LATER
+        if (HealthEventManager.OnObjectDamaged != null)
+        {
+            HealthEventManager.OnObjectDamaged(health);
+        }
 
         if (health <= 0)
         {
+            if (HealthEventManager.OnObjectDestroyed != null)
+            {
+                HealthEventManager.OnObjectDestroyed(health);
+            }
             Destroy(gameObject);
         }
     }
