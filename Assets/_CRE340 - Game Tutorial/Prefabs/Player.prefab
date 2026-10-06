@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 382550929123582503}
   - component: {fileID: 3425763952202195987}
   - component: {fileID: 1393528125201421626}
+  - component: {fileID: 818387027021145059}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -296,6 +297,23 @@ MonoBehaviour:
     maximumHealth: 100
     currentMana: 20
     maximumMana: 100
+--- !u!114 &818387027021145059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3857085256146687706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b464f311e088c124896c26ea561c6532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shoot
+  inputManager: {fileID: 5518454732112739475}
+  bulletPrefab: {fileID: 1449078611631862159, guid: f8c0c757631452d45ab76118058d1ea6, type: 3}
+  bulletSpawnPoint: {fileID: 0}
+  bulletSpeed: 20
+  shootCooldown: 0.2
 --- !u!1001 &1614132950580320855
 PrefabInstance:
   m_ObjectHideFlags: 0
