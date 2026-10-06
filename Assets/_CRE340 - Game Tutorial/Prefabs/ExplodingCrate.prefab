@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6704685498027092691}
   - component: {fileID: 2043587711715007413}
   - component: {fileID: 5455993381254522373}
+  - component: {fileID: 8358313869345388345}
   m_Layer: 0
   m_Name: ExplodingCrate
   m_TagString: Untagged
@@ -112,3 +113,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8358313869345388345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3989731008418020024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6493c29d595bff942b05167618b5bf68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExplodingCrate
