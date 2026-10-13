@@ -23,10 +23,9 @@ public class ExplodingCrate : MonoBehaviour, IDamagable
     public void TakeDamage(int damage)
     {
         health -= damage;
-
         if (HealthEventManager.OnObjectDamaged != null)
         {
-            HealthEventManager.OnObjectDamaged(health);
+            HealthEventManager.OnObjectDamaged(gameObject.name, health);
         }
 
         if (health <= 0)
@@ -35,7 +34,7 @@ public class ExplodingCrate : MonoBehaviour, IDamagable
 
             if (HealthEventManager.OnObjectDestroyed != null)
             {
-                HealthEventManager.OnObjectDestroyed(health);
+                HealthEventManager.OnObjectDestroyed(gameObject.name, health);
             }
             Destroy(gameObject);
         }
