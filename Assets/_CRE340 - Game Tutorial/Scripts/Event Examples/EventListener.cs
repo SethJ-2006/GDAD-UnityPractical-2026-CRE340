@@ -14,13 +14,13 @@ public class EventListener : MonoBehaviour
         HealthEventManager.OnObjectDestroyed -= HandleObjectDestroyed;
     }
 
-    private void HandleObjectDamaged(int remainingHealth)
+    private void HandleObjectDamaged(string name, int remainingHealth)
     {
-        Debug.Log("EVENT LISTENER SAYS: An object was damaged! Remaining health: " + remainingHealth);
+        Debug.Log("EVENT LISTENER SAYS: An object named " + name + " was damaged! Remaining health: " + remainingHealth);
     }
 
-    private void HandleObjectDestroyed(int remainingHealth)
+    private void HandleObjectDestroyed(string name, int remainingHealth)
     {
-        Debug.Log("EVENT LISTENER SAYS: An object has been destroyed!");
+        Debug.Log("EVENT LISTENER SAYS: An object named " + name + " has been destroyed!");
     }
 }
