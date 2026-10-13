@@ -61,7 +61,7 @@ public class PlayerStats : MonoBehaviour, IDamagable
 
     public void ShowHitEffect()
     {
-        StartCoroutine(FlashColour(Color.whiteSmoke));
+        StartCoroutine(FlashColour(Color.white));
     }
 
     private IEnumerator FlashColour(Color flashColour)

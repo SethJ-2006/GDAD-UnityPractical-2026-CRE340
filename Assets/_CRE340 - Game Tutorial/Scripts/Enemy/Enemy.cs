@@ -91,5 +91,25 @@ public class Enemy : MonoBehaviour, IDamagable
         // TODO in week 5.
         Destroy(gameObject);
     }
+
+    [Header("Contact Damage")]
+    public float damageCooldown = 1f;
+    private float lastDamageTime = -100f;
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (Time.time < lastDamageTime + damageCooldown)
+        {
+            return;
+        }
+
+        if (collision.gameObject.TryGetComponent<PlayerStats>(out PlayerStats playerStats))
+            {
+                playerStats.TakeDamage(enemyData.contactDamage);
+                playerStats.ShowHitEffect();
+
+                lastDamageTime = Time.time;
+            }
+    }    
 }
 

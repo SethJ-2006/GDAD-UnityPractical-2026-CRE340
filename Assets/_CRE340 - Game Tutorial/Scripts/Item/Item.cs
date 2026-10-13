@@ -21,8 +21,6 @@ public abstract class Item : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
             PlayerStats playerStats = other.GetComponent<PlayerStats>();
 
             if (playerStats != null)
@@ -30,8 +28,7 @@ public abstract class Item : MonoBehaviour
                 Use(playerStats);
 
                 Destroy(this.gameObject);
-            }
-        }    
+            }  
     }
 
     public void DisplayInfo()
