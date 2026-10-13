@@ -35,7 +35,7 @@ public class EventLogger : MonoBehaviour
     private void HandleObjectDestroyed(string name, int remainingHealth)
     {
         // Debug.Log("EVENT LISTENER SAYS: An object named " + name + " has been destroyed!");
-        string message = name + " has been destroyed!";
+        string message = "<color=red>" + name + " has been destroyed!</color=red>";
 
         Debug.Log(message);
         AddToLog(message);
