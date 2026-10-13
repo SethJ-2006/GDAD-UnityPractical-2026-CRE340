@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 5326462}
   - component: {fileID: 5326461}
   m_Layer: 5
-  m_Name: Event Logger
+  m_Name: Text Logger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,8 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Event Log Placeholder \nLog 1 .....\nLog 2 .....\nLog 3 .....\nLog 4 .....\nLog
-    5 .....\nLog 6 .....\nLog 7 .....\nLog 8 ....."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d90c42919ce11cf4c8d0c061c5764c13, type: 2}
   m_sharedMaterial: {fileID: -8212579064444525704, guid: d90c42919ce11cf4c8d0c061c5764c13, type: 2}
@@ -3483,7 +3482,7 @@ GameObject:
   - component: {fileID: 1922019394}
   - component: {fileID: 1922019393}
   m_Layer: 0
-  m_Name: EventListener (1)
+  m_Name: EventLogger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3501,6 +3500,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21943e98f8c0ac24ea39ff34e7b6a560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventListener
+  logText: {fileID: 5326461}
+  maxLines: 10
 --- !u!4 &1922019394
 Transform:
   m_ObjectHideFlags: 0
