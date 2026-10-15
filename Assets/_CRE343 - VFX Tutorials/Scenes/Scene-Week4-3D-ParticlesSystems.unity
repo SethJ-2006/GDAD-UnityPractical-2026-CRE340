@@ -12611,7 +12611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1f2ea1cc6e9fe754f949e76acda246bb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1366072282940632836, guid: 1f2ea1cc6e9fe754f949e76acda246bb, type: 3}
       propertyPath: m_CastShadows
@@ -20060,7 +20060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1371619363
 ParticleSystemRenderer:
   serializedVersion: 7
