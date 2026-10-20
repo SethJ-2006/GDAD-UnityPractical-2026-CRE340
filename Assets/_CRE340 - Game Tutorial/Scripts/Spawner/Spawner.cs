@@ -48,6 +48,12 @@ public class Spawner : MonoBehaviour
             float waitTime = Random.Range(minSpawnInterval, maxSpawnInterval);
             yield return new WaitForSeconds(waitTime);
 
+            if (GameManagerWeek5.Instance.IsGameOver)
+            {
+                yield break;
+            }
+
+
             CleanUpList();
 
             if (spawnedObjects.Count < maxAlive)

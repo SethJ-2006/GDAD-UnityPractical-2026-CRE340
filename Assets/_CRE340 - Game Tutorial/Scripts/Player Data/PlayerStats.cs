@@ -83,8 +83,7 @@ public class PlayerStats : MonoBehaviour, IDamagable
             HealthEventManager.OnObjectDestroyed(gameObject.name, data.currentHealth);
         }
 
-        Debug.Log("Player has died!");
-
-        // TODO in week 5
+        GameManagerWeek5.Instance.PlayerDied();
+        Destroy(gameObject);
     }
 }

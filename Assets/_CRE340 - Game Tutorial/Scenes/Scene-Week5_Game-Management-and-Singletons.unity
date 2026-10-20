@@ -433,7 +433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &193333731
 Transform:
   m_ObjectHideFlags: 0
@@ -662,6 +662,9 @@ MonoBehaviour:
   playerPrefab: {fileID: 3857085256146687706, guid: 3bf02e03c1bbf234bbb1b4813d72b3e5, type: 3}
   playerSpawnPoint: {fileID: 370114139}
   respawnDelay: 2
+  lives: 3
+  isGameOver: 0
+  restartDelay: 5
 --- !u!4 &327118522
 Transform:
   m_ObjectHideFlags: 0
@@ -1808,7 +1811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &933539653
 Transform:
   m_ObjectHideFlags: 0
@@ -2533,7 +2536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1556198988
 Transform:
   m_ObjectHideFlags: 0
@@ -3046,7 +3049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1814929381
 Transform:
   m_ObjectHideFlags: 0
