@@ -2317,7 +2317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bfded3e0612f4d43a6e2f909f756a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  prefabsToSpawn: []
+  prefabsToSpawn:
+  - {fileID: 8580640006230398758, guid: 89b588cd163e02c44a66bed52559cd80, type: 3}
+  - {fileID: 7631059550450958911, guid: 271dcbdc9c1818e45bde4be163e6a4c1, type: 3}
   spawnArea: {x: 20, y: 0, z: 20}
   spawnHeight: 0.5
   spawnOnStart: 1

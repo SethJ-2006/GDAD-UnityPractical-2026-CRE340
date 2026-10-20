@@ -19,6 +19,11 @@ public class PlayerStats : MonoBehaviour, IDamagable
     private Material mat;
     private Color originalColor;
 
+    private void Awake()
+    {
+        GameManagerWeek5.Instance.RegisterPlayer(this);
+    }
+    
     private void Start()
     {
         mat = GetComponent<Renderer>().material;

@@ -15,7 +15,6 @@ public class Enemy : MonoBehaviour, IDamagable
 
     private Material mat;
     private Color originalColor;
-    private Transform playerTransform;
 
     private void Awake()
     {
@@ -33,26 +32,20 @@ public class Enemy : MonoBehaviour, IDamagable
         originalColor = mat.color;
     }
 
-    private void Start()
-    {
-        PlayerStats player = FindFirstObjectByType<PlayerStats>();
-
-        if (player != null)
-        {
-            playerTransform = player.transform;
-        }
-    }
-
     private void Update()
     {
-        if (playerTransform != null)
+        // Ask the GameManager where the player is.
+        // There might not be one - not spawned yet, or dead - so check before using it.
+        if (GameManagerWeek5.Instance.Player == null)
         {
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                playerTransform.position,
-                enemyData.moveSpeed * Time.deltaTime
-            );
+            return;
         }
+
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            GameManagerWeek5.Instance.Player.transform.position,
+            enemyData.moveSpeed * Time.deltaTime
+        );
     }
 
     public void TakeDamage(int damage)
