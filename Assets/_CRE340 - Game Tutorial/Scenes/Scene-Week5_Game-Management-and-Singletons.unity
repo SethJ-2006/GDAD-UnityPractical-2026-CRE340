@@ -628,6 +628,52 @@ Transform:
   - {fileID: 338605546}
   m_Father: {fileID: 700346416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &327118520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 327118522}
+  - component: {fileID: 327118521}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &327118521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327118520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75139293759dc3845821fcbfce802142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManagerWeek5
+  coins: 0
+  xp: 0
+--- !u!4 &327118522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327118520}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.14736, y: 0.21789, z: 12.00002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1272,7 @@ MonoBehaviour:
   spawnHeight: 1
   spawnOnStart: 0
   startingAmount: 5
-  spawnContinuously: 1
+  spawningContinuously: 0
   minSpawnInterval: 10
   maxSpawnInterval: 30
   maxAlive: 1
@@ -2242,17 +2288,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1381253049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c1f40a3a685ec4ca99f5dd1f013bd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bfded3e0612f4d43a6e2f909f756a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  prefabsToSpawn:
-  - {fileID: 9115745409492772610, guid: ba36f61e25c869141816590ad9960d23, type: 3}
-  - {fileID: 9115745409492772610, guid: db967f2978c52de48ac24ad34d026203, type: 3}
+  prefabsToSpawn: []
   spawnArea: {x: 20, y: 0, z: 20}
-  spawnHeight: 1
+  spawnHeight: 0.5
   spawnOnStart: 1
   startingAmount: 5
-  spawnContinuously: 1
+  spawningContinuously: 0
   minSpawnInterval: 2
   maxSpawnInterval: 5
   maxAlive: 20
@@ -3543,3 +3587,4 @@ SceneRoots:
   - {fileID: 1381253051}
   - {fileID: 531185864}
   - {fileID: 1716938177}
+  - {fileID: 327118522}
