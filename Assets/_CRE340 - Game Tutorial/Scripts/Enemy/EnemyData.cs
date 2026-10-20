@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "NewEnemyData", menuName = "CRE340 - Game Tutorial/Enemy Data")]
 public class EnemyData : ScriptableObject
@@ -14,5 +14,6 @@ public class EnemyData : ScriptableObject
     public int contactDamage = 5;
 
     [Header("Rewards")]
-    public int scoreValue = 10; // to be done in week 5
+    [FormerlySerializedAs("scoreValue")]
+    public int xpValue = 10;
 }

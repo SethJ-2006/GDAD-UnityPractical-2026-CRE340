@@ -88,7 +88,7 @@ public class Enemy : MonoBehaviour, IDamagable
 
     private void Die()
     {
-        // TODO in week 5.
+        GameManagerWeek5.Instance.AddXP(enemyData.xpValue);
         Destroy(gameObject);
     }
 

@@ -1245,6 +1245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 531185864}
+  - component: {fileID: 531185865}
   - component: {fileID: 531185863}
   m_Layer: 0
   m_Name: Item Spawner
@@ -1260,7 +1261,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531185862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55c1f40a3a685ec4ca99f5dd1f013bd6, type: 3}
   m_Name: 
@@ -1292,6 +1293,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &531185865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531185862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfded3e0612f4d43a6e2f909f756a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  prefabsToSpawn:
+  - {fileID: 5212481005939477988, guid: 30ed98f06852a8b4db07c65756c9630d, type: 3}
+  - {fileID: 8051283116689408346, guid: bdb6b6fe31839b8418826d7a87c8fa2e, type: 3}
+  - {fileID: 2401133799724684217, guid: 177bb94ca0cf44d4f9805962e83b9f65, type: 3}
+  spawnArea: {x: 20, y: 0, z: 20}
+  spawnHeight: 0.5
+  spawnOnStart: 1
+  startingAmount: 5
+  spawningContinuously: 0
+  minSpawnInterval: 2
+  maxSpawnInterval: 5
+  maxAlive: 20
+  spawnedObjects: []
 --- !u!1 &557391536
 GameObject:
   m_ObjectHideFlags: 0
