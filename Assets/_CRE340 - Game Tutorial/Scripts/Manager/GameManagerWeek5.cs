@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagerWeek5 : MonoBehaviour
 {
@@ -52,7 +54,7 @@ public class GameManagerWeek5 : MonoBehaviour
     }
     public int XP
     {
-        get { return xp;  }
+        get { return xp; }
     }
 
     public void AddCoins(int amount)
@@ -81,6 +83,87 @@ public class GameManagerWeek5 : MonoBehaviour
     public void RegisterPlayer(PlayerStats newPlayer)
     {
         player = newPlayer;
+    }
+
+    #endregion
+
+    #region Player Spawning
+    [Header("Player")]
+    public GameObject playerPrefab;
+    public Transform playerSpawnPoint;
+    public float respawnDelay = 2f;
+
+    private void Start()
+    {
+        SpawnPlayer();
+    }
+
+    private void SpawnPlayer()
+    {
+        if (playerPrefab == null || playerSpawnPoint == null)
+        {
+            Debug.LogError("Player cannot be spawned in. Please check to see if either the Player Prefab or the Player Spawn Point is empty.");
+            return;
+        }
+
+        Instantiate(playerPrefab, playerSpawnPoint.position, playerSpawnPoint.rotation);
+    }
+
+    [Header("Lives")]
+    [SerializeField] private int lives = 3;
+
+    public int Lives
+    {
+        get { return lives; }
+    }
+
+    public void PlayerDied()
+    {
+        lives = lives - 1;
+        Debug.Log("Player has died. Lives remaining: " + lives);
+
+        if (lives > 0)
+        {
+            StartCoroutine(RespawnAfterDelay());
+        }
+        else
+        {
+            GameOver();
+        }
+    }
+
+    private IEnumerator RespawnAfterDelay()
+    {
+        yield return new WaitForSeconds(respawnDelay);
+        SpawnPlayer();
+    }
+
+    #endregion
+
+    #region Game State
+
+    [Header("Game State")]
+    [SerializeField] private bool isGameOver = false;
+    public float restartDelay = 5f;
+
+    public bool IsGameOver
+    {
+        get { return isGameOver; }
+    }
+
+    public void GameOver()
+    {
+        isGameOver = true;
+        Debug.Log("GAME OVER - Coins collected: " + coins + " | Total XP: " + xp);
+
+        StartCoroutine(RestartAfterDelay());
+    }
+
+    private IEnumerator RestartAfterDelay()
+    {
+        yield return new WaitForSeconds(restartDelay);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     #endregion
