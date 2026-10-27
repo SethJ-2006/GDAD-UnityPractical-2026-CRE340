@@ -4987,6 +4987,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2677775417334960819, guid: e81ddb8a31330e24ea403cb37a9ead29, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
+      objectReference: {fileID: 0}
     - target: {fileID: 5207409535355631426, guid: e81ddb8a31330e24ea403cb37a9ead29, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

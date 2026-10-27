@@ -186,4 +186,22 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
+
+    #region Subscription
+    private void OnEnable()
+    {
+        EventBus<EnemyKilled>.Subscribe(HandleEnemyKilled);
+    }
+
+    private void OnDisable()
+    {
+        EventBus<EnemyKilled>.Unsubscribe(HandleEnemyKilled);
+    }
+
+    private void HandleEnemyKilled(EnemyKilled message)
+    {
+        AddXP(message.xpValue);
+    }
+
+    #endregion
 }
