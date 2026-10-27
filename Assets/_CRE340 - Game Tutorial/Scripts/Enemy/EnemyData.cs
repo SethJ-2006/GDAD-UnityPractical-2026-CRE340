@@ -1,19 +1,21 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
+// [CreateAssetMenu] adds this to Unity's Create menu so we can make assets from it.
+// fileName is the default name for a new one, menuName is where it appears in the menu.
 [CreateAssetMenu(fileName = "NewEnemyData", menuName = "CRE340 - Game Tutorial/Enemy Data")]
 public class EnemyData : ScriptableObject
 {
     [Header("Identity")]
     public string enemyName = "Bad Guy";
-    public Color enemyColor = Color.mediumVioletRed;
+    public Color enemyColor = Color.red;
 
     [Header("Stats")]
-    public int startingHealth = 10;
-    public float moveSpeed = 2f;
-    public int contactDamage = 5;
+    public int startingHealth = 10;   // health this enemy type STARTS with
+    public float moveSpeed = 2f;      // how fast it chases the player
+    public int contactDamage = 5;     // damage it deals by touching the player
 
+    [FormerlySerializedAs("scoreValue")] 
     [Header("Rewards")]
-    [FormerlySerializedAs("scoreValue")]
-    public int xpValue = 10;
+    public int xpValue = 10;       //TODO - THIS WAS REFACTORED
 }

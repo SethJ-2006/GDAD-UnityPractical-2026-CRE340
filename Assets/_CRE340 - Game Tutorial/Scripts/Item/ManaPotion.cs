@@ -1,26 +1,29 @@
 using UnityEngine;
 
-public class ManaPotion : Item
+// Derived class ManaPotion - it IS an Item, plus it restores mana 
+public class ManaPotion : Item // 
 {
     [Header("Mana Potion")]
-    public int manaRecoverAmount;
-    public int minRecoverAmount = 10;
-    public int maxRecoverAmount = 50;
+    public int manaRestoreAmount;       // Amount of mana this potion restores
+    public int minRestoreAmount = 20;   // Minimum restore amount for the random range
+    public int maxRestoreAmount = 50;   // Maximum restore amount for the random range
 
     protected override void Awake()
     {
-        base.Awake();
+        base.Awake();   // always call the base version first
 
-        data = new ItemData("Mana Potion", "A potion that replenishes Mana.");
+        // Same constructor, different identity
+        data = new ItemData("Mana Potion", "A potion that restores mana.");
 
-        manaRecoverAmount = Random.Range(minRecoverAmount, maxRecoverAmount);
+        manaRestoreAmount = Random.Range(minRestoreAmount, maxRestoreAmount);
 
-        Debug.Log("ManaPotion: random recover amount set to " + manaRecoverAmount);
+        Debug.Log("ManaPotion: random restore amount set to " + manaRestoreAmount);
     }
 
+    // Same method name, same signature, completely different behaviour
     public override void Use(PlayerStats player)
     {
-        Debug.Log("Mana Potion used - recovering " + manaRecoverAmount + " mana.");
-        player.RecoverMana(manaRecoverAmount);
+        Debug.Log("Mana Potion used - restoring " + manaRestoreAmount + " mana.");
+        player.RestoreMana(manaRestoreAmount);
     }
 }
