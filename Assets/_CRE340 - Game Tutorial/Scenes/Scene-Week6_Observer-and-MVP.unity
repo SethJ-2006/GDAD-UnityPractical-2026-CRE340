@@ -398,15 +398,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1552686560857100462, guid: 3bf02e03c1bbf234bbb1b4813d72b3e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.56279
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1552686560857100462, guid: 3bf02e03c1bbf234bbb1b4813d72b3e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1552686560857100462, guid: 3bf02e03c1bbf234bbb1b4813d72b3e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.63329
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1552686560857100462, guid: 3bf02e03c1bbf234bbb1b4813d72b3e5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1864,7 +1864,7 @@ MonoBehaviour:
   spawnHeight: 1
   spawnOnStart: 0
   startingAmount: 5
-  spawnContinuously: 1
+  spawningContinuously: 0
   minSpawnInterval: 10
   maxSpawnInterval: 30
   maxAlive: 1
@@ -2179,6 +2179,7 @@ GameObject:
   - component: {fileID: 744910894}
   - component: {fileID: 744910896}
   - component: {fileID: 744910895}
+  - component: {fileID: 744910897}
   m_Layer: 5
   m_Name: Text - Coins
   m_TagString: Untagged
@@ -2306,6 +2307,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744910893}
   m_CullTransparentMesh: 1
+--- !u!114 &744910897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744910893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22cf4600e8201514c9181e56916f78d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinDisplayPolling
 --- !u!4 &816748516 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 3015b897245edbf4188e614f0147622c, type: 3}
@@ -3212,7 +3225,7 @@ MonoBehaviour:
   spawnHeight: 1
   spawnOnStart: 1
   startingAmount: 5
-  spawnContinuously: 1
+  spawningContinuously: 0
   minSpawnInterval: 2
   maxSpawnInterval: 5
   maxAlive: 20
@@ -3904,11 +3917,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5329251493435440987, guid: 177bb94ca0cf44d4f9805962e83b9f65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.78321
+      value: 3.42
       objectReference: {fileID: 0}
     - target: {fileID: 5329251493435440987, guid: 177bb94ca0cf44d4f9805962e83b9f65, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.96701
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5329251493435440987, guid: 177bb94ca0cf44d4f9805962e83b9f65, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3998,11 +4011,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1847686026302233725, guid: 2326076261fc5af4d9680be627eb02cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.17299
+      value: -10.03
       objectReference: {fileID: 0}
     - target: {fileID: 1847686026302233725, guid: 2326076261fc5af4d9680be627eb02cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7552
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1847686026302233725, guid: 2326076261fc5af4d9680be627eb02cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4523,14 +4536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1389ed46d41a3f34a837ee994295ff2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  playerPrefab: {fileID: 549597671983125512, guid: e81ddb8a31330e24ea403cb37a9ead29, type: 3}
-  playerSpawnPoint: {fileID: 973448594}
-  respawnDelay: 2
-  lives: 3
-  isGameOver: 0
-  restartDelay: 3
-  coins: 0
-  xp: 0
 --- !u!4 &1835090969
 Transform:
   m_ObjectHideFlags: 0
