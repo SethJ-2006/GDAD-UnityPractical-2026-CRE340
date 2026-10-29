@@ -1849,7 +1849,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531185862}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55c1f40a3a685ec4ca99f5dd1f013bd6, type: 3}
   m_Name: 
@@ -5400,6 +5400,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930494303}
   m_CullTransparentMesh: 1
+--- !u!1 &2087424681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 549597671983125512, guid: e81ddb8a31330e24ea403cb37a9ead29, type: 3}
+  m_PrefabInstance: {fileID: 3844193564143551838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2087424690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087424681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9453c0f5ba160084c9526bab4050b284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPop
+  duration: 0.5
+  ease: 24
+  startDelay: 2
 --- !u!1001 &2099213527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5670,7 +5690,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 549597671983125512, guid: e81ddb8a31330e24ea403cb37a9ead29, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2087424690}
   m_SourcePrefab: {fileID: 100100000, guid: e81ddb8a31330e24ea403cb37a9ead29, type: 3}
 --- !u!1001 &5409532854309037013
 PrefabInstance:

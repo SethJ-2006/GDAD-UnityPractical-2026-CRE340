@@ -170,6 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9453c0f5ba160084c9526bab4050b284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnPop
-  duration: 0.3
+  duration: 0.9
   ease: 30
   startDelay: 0
