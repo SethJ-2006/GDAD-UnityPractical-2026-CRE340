@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 147439215906328116}
   - component: {fileID: 1537107450776595620}
   - component: {fileID: 514603957216932305}
-  - component: {fileID: -7120454030107751022}
+  - component: {fileID: -5090002539457292807}
   m_Layer: 0
   m_Name: Enemy_Blue
   m_TagString: Untagged
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemyData: {fileID: 11400000, guid: 2ce582714532ef247a325b303e38f22a, type: 2}
   damageCooldown: 1
---- !u!114 &-7120454030107751022
+--- !u!114 &-5090002539457292807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,9 +167,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9115745409492772610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9453c0f5ba160084c9526bab4050b284, type: 3}
+  m_Script: {fileID: 11500000, guid: 357c9c36cff44984685fc2900050aada, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnPop
-  duration: 0.9
-  ease: 30
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnPopOvershoot
+  duration: 0.8
+  ease: 27
   startDelay: 0
