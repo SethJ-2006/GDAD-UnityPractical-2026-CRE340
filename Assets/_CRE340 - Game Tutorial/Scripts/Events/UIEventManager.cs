@@ -1,9 +1,10 @@
-using UnityEngine;
-
+// UIEventManager.cs
+// A static class holding the UI events. It stores nothing and does no work.
+// Things that change announce it here, and anything interested subscribes.
 
 public static class UIEventManager
 {
-    // --- Player ---
+    // ---------- Player ----------
 
     public delegate void StatEvent(int current, int max);
 
@@ -26,7 +27,7 @@ public static class UIEventManager
         }
     }
 
-    // --- Progression ---
+    // ---------- Progression ----------
 
     public delegate void ValueEvent(int value);
 
@@ -58,7 +59,7 @@ public static class UIEventManager
         }
     }
 
-    // --- Game State ---
+    // ---------- Game State ----------
 
     public delegate void SimpleEvent();
 
@@ -71,5 +72,4 @@ public static class UIEventManager
             OnGameOver();
         }
     }
-
 }

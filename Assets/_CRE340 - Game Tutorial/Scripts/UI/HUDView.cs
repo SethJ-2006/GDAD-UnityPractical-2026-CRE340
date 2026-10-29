@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 
+// The VIEW - it knows how to display things and nothing else.
+// No events, no GameManager, no game logic. Give it a number and it shows the number.
 public class HUDView : MonoBehaviour
 {
     [Header("Player - Text")]
@@ -34,10 +36,10 @@ public class HUDView : MonoBehaviour
             healthText.text = "Health: " + current + " / " + max;
         }
 
-            if (healthBar != null)
-            {
-                healthBar.SetValue(current, max);
-            }
+        if (healthBar != null)
+        {
+            healthBar.SetValue(current, max);
+        }
     }
 
     public void ShowMana(int current, int max)
@@ -47,10 +49,10 @@ public class HUDView : MonoBehaviour
             manaText.text = "Mana: " + current + " / " + max;
         }
 
-            if (manaBar != null)
-            {
-                manaBar.SetValue(current, max);
-            }
+        if (manaBar != null)
+        {
+            manaBar.SetValue(current, max);
+        }
     }
 
     public void ShowCoins(int value)
@@ -65,7 +67,7 @@ public class HUDView : MonoBehaviour
     {
         if (xpText != null)
         {
-            xpText.text = "Experience Points: " + value;
+            xpText.text = "XP: " + value;
         }
     }
 

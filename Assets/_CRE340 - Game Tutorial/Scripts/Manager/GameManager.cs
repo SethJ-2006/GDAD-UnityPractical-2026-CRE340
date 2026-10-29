@@ -61,6 +61,21 @@ public class GameManager : MonoBehaviour
         get { return lives; }
     }
 
+    private void OnEnable()
+    {
+        EventBus<EnemyKilled>.Subscribe(HandleEnemyKilled);
+    }
+
+    private void OnDisable()
+    {
+        EventBus<EnemyKilled>.Unsubscribe(HandleEnemyKilled);
+    }
+
+    private void HandleEnemyKilled(EnemyKilled message)
+    {
+        AddXP(message.xpValue);
+    }
+    
     private void Start()
     {
         SpawnPlayer();
@@ -158,6 +173,7 @@ public class GameManager : MonoBehaviour
     {
         coins = coins + amount;
 
+        // Announce it. No idea what's listening and we don't have to know
         UIEventManager.CoinsChanged(coins);
     }
 
@@ -165,6 +181,7 @@ public class GameManager : MonoBehaviour
     {
         xp = xp + amount;
 
+        //same thing we just announce the value has changed
         UIEventManager.XPChanged(xp);
     }
 
@@ -183,24 +200,6 @@ public class GameManager : MonoBehaviour
     public void RegisterPlayer(PlayerStats newPlayer)
     {
         player = newPlayer;
-    }
-
-    #endregion
-
-    #region Subscription
-    private void OnEnable()
-    {
-        EventBus<EnemyKilled>.Subscribe(HandleEnemyKilled);
-    }
-
-    private void OnDisable()
-    {
-        EventBus<EnemyKilled>.Unsubscribe(HandleEnemyKilled);
-    }
-
-    private void HandleEnemyKilled(EnemyKilled message)
-    {
-        AddXP(message.xpValue);
     }
 
     #endregion

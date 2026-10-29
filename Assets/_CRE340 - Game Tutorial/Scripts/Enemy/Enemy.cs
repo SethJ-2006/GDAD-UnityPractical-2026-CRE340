@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IDamagable
@@ -111,17 +110,25 @@ public class Enemy : MonoBehaviour, IDamagable
         mat.color = originalColor;
     }
 
+    // private void Die()
+    // {
+    //     // TODO - WE ADDED A SINGLETON MANAGER SO NOW WE CABN CALL IT EASILY FROM HERE
+    //     GameManager.Instance.AddXP(enemyData.xpValue);
+    //     
+    //     Destroy(gameObject);
+    // }
+    
     private void Die()
     {
-        // TODO - WE ADDED A SINGLETON MANAGER SO NOW WE CABN CALL IT EASILY FROM HERE
+        // Describe what happened
         EnemyKilled message = new EnemyKilled();
         message.enemyName = enemyData.enemyName;
         message.xpValue = enemyData.xpValue;
         message.position = transform.position;
 
-
+        // Announce it. We have no idea whats listening. 
         EventBus<EnemyKilled>.Publish(message);
-        
+
         Destroy(gameObject);
     }
     

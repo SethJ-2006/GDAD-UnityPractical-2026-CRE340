@@ -156,3 +156,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemyData: {fileID: 11400000, guid: 14ca061bed5a91c4bb82a4aad62fb540, type: 2}
+  damageCooldown: 1

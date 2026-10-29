@@ -36,8 +36,9 @@ public class PlayerStats : MonoBehaviour, IDamagable
         mat = GetComponent<Renderer>().material;
         originalColor = mat.color;
 
+        // A new player has appeared - tell the UI what our stats are
         UIEventManager.HealthChanged(data.currentHealth, data.maxHealth);
-        UIEventManager.ManaChanged(data.currentMana, data.currentMana);
+        UIEventManager.ManaChanged(data.currentMana, data.maxMana);
     }
 
     // Add health, but never go above maxHealth
@@ -63,7 +64,7 @@ public class PlayerStats : MonoBehaviour, IDamagable
     {
         data.currentHealth = data.currentHealth - damage;
         data.currentHealth = Mathf.Clamp(data.currentHealth, 0, data.maxHealth);
-
+        
         UIEventManager.HealthChanged(data.currentHealth, data.maxHealth);
 
         // Broadcast it, exactly like the crates and enemies do.
