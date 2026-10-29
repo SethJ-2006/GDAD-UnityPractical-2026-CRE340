@@ -1756,9 +1756,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 418530104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54d629c658715494e8ba83d4e7e9004a, type: 3}
+  m_Script: {fileID: 11500000, guid: 12c8be4d140428b49aed676775c3d662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIPunch
+  coinTarget: {fileID: 744910894}
+  xpTarget: {fileID: 370859907}
+  punchStrength: 0.25
+  duration: 0.3
+  frequency: 5
 --- !u!1001 &457974137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3238,6 +3243,8 @@ MonoBehaviour:
   flashStrength: 0.6
   flashUp: 0.05
   flashDown: 0.4
+  aberrationStrength: 0.3
+  desaturateTime: 5
 --- !u!4 &1205646390
 Transform:
   m_ObjectHideFlags: 0
@@ -5830,7 +5837,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1095788361939118328, guid: cfcedc154e62c6d489bb8ecbf04fc552, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 8.12
       objectReference: {fileID: 0}
     - target: {fileID: 1095788361939118328, guid: cfcedc154e62c6d489bb8ecbf04fc552, type: 3}
       propertyPath: m_LocalPosition.y
