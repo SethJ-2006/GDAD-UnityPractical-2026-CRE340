@@ -60,6 +60,10 @@ public class Shoot : MonoBehaviour
         lastShootTime = Time.time;
 
         // --- NEW - todo announce that a shot was fired - add the week 6 code here... ---
+        WeaponFired message = new WeaponFired();
+        message.position = bulletSpawnPoint.position;
+        message.direction = bulletDirection;
 
+        EventBus<WeaponFired>.Publish(message);
     }
 }
