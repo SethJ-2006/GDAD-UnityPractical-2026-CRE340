@@ -1,3 +1,0 @@
-Read the title. 
-
-This is just a placeholder so I can export my empty folders as packages.

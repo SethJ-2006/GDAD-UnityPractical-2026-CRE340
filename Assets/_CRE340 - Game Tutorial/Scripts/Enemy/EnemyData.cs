@@ -6,6 +6,9 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "NewEnemyData", menuName = "CRE340 - Game Tutorial/Enemy Data")]
 public class EnemyData : ScriptableObject
 {
+    [Header("Prefab")]
+    public GameObject enemyPrefab;    // the prefab this enemy type is built from
+    
     [Header("Identity")]
     public string enemyName = "Bad Guy";
     public Color enemyColor = Color.red;
@@ -18,4 +21,7 @@ public class EnemyData : ScriptableObject
     [FormerlySerializedAs("scoreValue")] 
     [Header("Rewards")]
     public int xpValue = 10;       //TODO - THIS WAS REFACTORED
+    
+    [Header("Behaviour")]
+    public float chaseRange = 8f;    // how close the player gets before this enemy chases
 }
